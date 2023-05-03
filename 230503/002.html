@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart line</title>
+    <style>
+        svg{
+            margin: 30px;
+        }
+        #path1{
+            fill: none;
+            stroke: #ff9797;
+            stroke-width: 10px;
+            stroke-linecap: round;
+            stroke-dasharray: 1588 1588;
+            stroke-dashoffset: 1300;
+            animation: line 3s infinite;
+        }
+
+
+        @keyframes line{
+            from{
+                stroke-dashoffset: 1588;
+            }
+
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+
+        #path2{
+            fill: none;
+            stroke: #000000;
+            stroke-width: 10px;
+            stroke-linecap: round;
+            stroke-dasharray: 2989 2989;
+            stroke-dashoffset: 2700;
+            animation: line 3s infinite;
+        }
+
+
+        @keyframes line{
+            from{
+                stroke-dashoffset: 2989;
+            }
+
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg viewBox="0 0 1000 182" xmlns="http://www.w3.org/2000/svg">
+
+        <path id="path1"
+            d="M7 137.125C7 137.125 150.6 175.425 292.3 175.425C434 175.425 537.1 161.025 573.5 85.225C626.6 -25.375 460.9 52.325 500.5 89.025C514 101.525 527.5 0.625014 471.7 6.22501C426 10.825 426.2 56.125 434.1 79.525C451.8 132.525 497.9 168.025 590 175.425C682.1 182.825 829.2 120.425 993.1 120.425" />
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="496" height="410" viewBox="0 0 496 410" fill="none">
+        <path id="path2" d="M1 72.9999C1 72.9999 55.2044 -1.64574 176 0.999963C296.796 3.64567 151.05 227.888 125 239C98.9498 250.112 80 249.321 74 249.41C68 249.5 21 242.411 98 204.411C175 166.411 252.002 183 269 205C285.998 227 311 299 311 299M311 299L326 347C326 347 344 386 320 387C296 388 269 380 269 380C269 380 95 277 84 239C73 201 91 166 119 133C147 100 229.324 120.415 269 133C308.676 145.585 292.555 228.727 269 232C245.445 235.273 248 233.223 244 220.861C240 208.5 254.087 67.2812 326 28.8613C359.361 11.0379 376 -9.00003 421 9.99997C466 29 465 30.9999 486 56.9999C507 82.9999 486 143 460 183C434 223 297.01 379.294 220 407C220 407 196 415 190 397C184 379 199 374.94 210 362C221 349.06 261.5 311 311 299ZM311 299C465.5 282.5 467.05 322.176 472 332C476.95 341.824 472 362 472 362" stroke="black"/>
+    </svg>
+    <script>
+        const path1 = document.querySelector('#path1');
+        console.log(path1.getTotalLength())
+        
+        const path2 = document.querySelector('#path2');
+        console.log(path2.getTotalLength())
+        
+    </script>
+</body>
+
+</html>
